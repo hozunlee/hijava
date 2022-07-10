@@ -1,15 +1,18 @@
 package hijava.javastudy;
 
 public class Customer {
+	public static final int NIKE = 3000;
+	
 	private String id;
 	private String name;
 	private int amount;
 	private float rate;
-	private float point = 0;
+	private int point = 0;
 	
 	public Customer() {
-		this.rate = (float) 0.02;
+		this.rate = 0.02f;
 	}
+	
 	
 	public Customer(String id, String name, int amount) {
 		this();
@@ -22,7 +25,7 @@ public class Customer {
 		int deposit = amount - price;
 		if(deposit > 0) {
 			this.amount -= price;
-			this.point = price * rate;
+			this.point += price * rate;
 			return amount;			
 		} else {
 			return -1;
@@ -70,7 +73,7 @@ public class Customer {
 		return point;
 	}
 
-	public void setPoint(float point) {
+	public void setPoint(int point) {
 		this.point = point;
 	}
 

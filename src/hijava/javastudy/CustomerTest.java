@@ -10,5 +10,13 @@ public class CustomerTest {
 		System.out.println(kim.getPoint());
 	
 		System.out.println(kim);
+		
+		kim.buy(3000);
+		
+		System.out.println(kim.getAmount());
+		System.out.println(kim.getPoint());
+	
+		System.out.println(kim);
+
 	}
 }
